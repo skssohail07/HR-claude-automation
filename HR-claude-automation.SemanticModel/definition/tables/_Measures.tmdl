@@ -39,3 +39,4 @@ table _Measures
 		source = ROW ( "Placeholder", 1 )
 
 	annotation PBI_ResultType = Table
+

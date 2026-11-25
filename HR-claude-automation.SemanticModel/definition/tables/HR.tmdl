@@ -23,8 +23,8 @@ table HR
 		dataType: string
 		lineageTag: 10cc64e7-5934-40a4-92c6-48814b126f45
 		summarizeBy: none
-		sortByColumn: AgeGroupOrder
 		sourceColumn: AgeGroup
+		sortByColumn: AgeGroupOrder
 
 		annotation SummarizationSetBy = Automatic
 
@@ -61,7 +61,7 @@ table HR
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'DistanceFromHome(KM)'
+	column DistanceFromHome(KM)
 		dataType: int64
 		formatString: 0
 		lineageTag: 29f10a69-d743-427b-a44b-5ac900b0a949
@@ -178,8 +178,8 @@ table HR
 		dataType: string
 		lineageTag: 935095a6-385a-4fcf-9560-78de9ef688d8
 		summarizeBy: none
-		sortByColumn: SalarySlabOrder
 		sourceColumn: SalarySlab
+		sortByColumn: SalarySlabOrder
 
 		annotation SummarizationSetBy = Automatic
 
@@ -261,7 +261,7 @@ table HR
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'TotalExperience(Years)'
+	column TotalExperience(Years)
 		dataType: int64
 		formatString: 0
 		lineageTag: d411dfba-b94b-467b-bb3d-7115b1704e9a
@@ -326,8 +326,8 @@ table HR
 
 	column AgeGroupOrder
 		dataType: int64
-		formatString: 0
 		isHidden
+		formatString: 0
 		lineageTag: fa22a00a-346a-4aae-8548-eb7da122afc0
 		summarizeBy: none
 		sourceColumn: AgeGroupOrder
@@ -336,8 +336,8 @@ table HR
 
 	column SalarySlabOrder
 		dataType: int64
-		formatString: 0
 		isHidden
+		formatString: 0
 		lineageTag: bddd2af9-19c0-4e88-a9ee-ad4b5ffe629f
 		summarizeBy: none
 		sourceColumn: SalarySlabOrder
@@ -362,3 +362,4 @@ table HR
 					Typed
 
 	annotation PBI_ResultType = Table
+
