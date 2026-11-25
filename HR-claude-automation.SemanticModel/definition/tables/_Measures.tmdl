@@ -1,0 +1,41 @@
+table _Measures
+	lineageTag: bf7cb108-8310-4922-a6c5-c93b7d91dca1
+
+	measure 'Total Employees' = COUNTROWS ( HR )
+		formatString: #,0
+		lineageTag: 825c45f1-0519-4cc4-b3d4-f458ed682478
+
+	measure 'Attrition Count' = CALCULATE ( COUNTROWS ( HR ), HR[Attrition] = "Yes" )
+		formatString: #,0
+		lineageTag: 68654aa0-ae89-4773-b893-80fd70406854
+
+	measure 'Active Employees' = CALCULATE ( COUNTROWS ( HR ), HR[Attrition] = "No" )
+		formatString: #,0
+		lineageTag: 6eeefbf4-9d5a-4ce8-a5a3-45d86e67432d
+
+	measure 'Attrition Rate %' = DIVIDE ( [Attrition Count], [Total Employees] )
+		formatString: 0.0%
+		lineageTag: 94820785-5ad7-4519-86ed-2cc9bc2825e2
+
+	measure 'Average Age' = AVERAGE ( HR[Age] )
+		formatString: 0.00
+		lineageTag: 084304df-de23-419c-82d7-8597d1bf675b
+
+	measure 'Avg Experience' = AVERAGE ( HR[YearsatCompany] )
+		formatString: 0.00
+		lineageTag: 454fdcd4-2589-461a-a57a-31741c116201
+
+	column Placeholder
+		dataType: int64
+		isHidden
+		lineageTag: 51b1bb70-4218-4201-8ea6-c38eccd00288
+		summarizeBy: none
+		sourceColumn: [Placeholder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = ROW ( "Placeholder", 1 )
+
+	annotation PBI_ResultType = Table

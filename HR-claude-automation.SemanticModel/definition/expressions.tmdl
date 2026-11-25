@@ -1,0 +1,5 @@
+expression DataFolder = "C:\Users\SohailSK\OneDrive - Xebia\Documents\PowerBI-models\HR-claude-automation\Data\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 4036ead4-bbaf-411d-b9dc-c81ae575ccf8
+
+	annotation PBI_ResultType = Text
+
