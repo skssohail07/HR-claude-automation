@@ -344,6 +344,77 @@ table HR
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Risk Score' =
+			IF ( HR[OverTime] = "Yes", 1, 0 )
+				+ IF ( HR[BusinessTravel] = "Travel_Frequently", 1, 0 )
+				+ IF ( HR[JobSatisfaction] <= 2, 1, 0 )
+				+ IF ( HR[WorkLifeBalance] <= 2, 1, 0 )
+				+ IF ( HR[EnvironmentSatisfaction] <= 2, 1, 0 )
+				+ IF ( HR[YearsatCompany] <= 1, 1, 0 )
+				+ IF ( HR[StockOptionLevel] = 0, 1, 0 )
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a2584d9-7fc9-4833-a838-a22d5389c938
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tenure Band Sort' =
+			SWITCH ( TRUE (),
+				HR[YearsatCompany] <= 1, 1,
+				HR[YearsatCompany] <= 3, 2,
+				HR[YearsatCompany] <= 5, 3,
+				HR[YearsatCompany] <= 10, 4,
+				5 )
+		isHidden
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a7ed2cc-8282-4701-8eff-63aef06c31b2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tenure Band' =
+			SWITCH ( TRUE (),
+				HR[YearsatCompany] <= 1, "0-1 yrs",
+				HR[YearsatCompany] <= 3, "2-3 yrs",
+				HR[YearsatCompany] <= 5, "4-5 yrs",
+				HR[YearsatCompany] <= 10, "6-10 yrs",
+				"11+ yrs" )
+		dataType: string
+		lineageTag: f0b2d6dd-b776-4717-b28b-32ff1f37c556
+		summarizeBy: none
+		sortByColumn: 'Tenure Band Sort'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distance Band Sort' =
+			SWITCH ( TRUE (),
+				HR[DistanceFromHome(KM)] <= 5, 1,
+				HR[DistanceFromHome(KM)] <= 10, 2,
+				HR[DistanceFromHome(KM)] <= 20, 3,
+				4 )
+		isHidden
+		dataType: int64
+		formatString: 0
+		lineageTag: c998f81d-c115-4521-a29a-5d386f075667
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distance Band' =
+			SWITCH ( TRUE (),
+				HR[DistanceFromHome(KM)] <= 5, "0-5 km",
+				HR[DistanceFromHome(KM)] <= 10, "6-10 km",
+				HR[DistanceFromHome(KM)] <= 20, "11-20 km",
+				"21-30 km" )
+		dataType: string
+		lineageTag: 24b59536-1c2d-472f-a94b-6d0efa65f43b
+		summarizeBy: none
+		sortByColumn: 'Distance Band Sort'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition HR = m
 		mode: import
 		source =

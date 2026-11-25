@@ -25,6 +25,51 @@ table _Measures
 		formatString: 0.00
 		lineageTag: 8ba085ff-4253-4bdc-9d0f-be9e7e3d60f5
 
+	measure 'Active At Risk' = CALCULATE (
+				COUNTROWS ( HR ),
+				HR[Attrition] = "No",
+				HR[OverTime] = "Yes",
+				FILTER ( HR, HR[JobSatisfaction] <= 2 || HR[WorkLifeBalance] <= 2 || HR[EnvironmentSatisfaction] <= 2 )
+			)
+		formatString: #,0
+		lineageTag: 0d170063-97ad-4a23-8eb0-07d7b2cd9cef
+
+	measure 'High Risk Watchlist Count' = CALCULATE ( COUNTROWS ( HR ), HR[Attrition] = "No", HR[Risk Score] >= 4 )
+		formatString: #,0
+		lineageTag: 650fc251-6b34-4f1a-901d-42c6503913dc
+
+	measure 'Overtime %' = DIVIDE ( CALCULATE ( COUNTROWS ( HR ), HR[OverTime] = "Yes" ), COUNTROWS ( HR ) )
+		formatString: 0.0%
+		lineageTag: 8ea258fb-7fd7-43d8-9445-42b855410302
+
+	measure 'First Year Active' = CALCULATE ( COUNTROWS ( HR ), HR[Attrition] = "No", HR[YearsatCompany] <= 1 )
+		formatString: #,0
+		lineageTag: 32c08aaa-abe3-45c6-b8e9-0fcc2f776858
+
+	measure 'No Promotion 5Y Active' = CALCULATE ( COUNTROWS ( HR ), HR[Attrition] = "No", HR[YearsSincePromotion] >= 5 )
+		formatString: #,0
+		lineageTag: 1ff449c4-1865-439b-971a-007884c29aad
+
+	measure 'Avg Job Satisfaction' = AVERAGE ( HR[JobSatisfaction] )
+		formatString: 0.00
+		lineageTag: cddf755c-3708-4022-ad0d-33633a1e113a
+
+	measure 'Avg Work Life Balance' = AVERAGE ( HR[WorkLifeBalance] )
+		formatString: 0.00
+		lineageTag: 70218eba-e279-4c11-ab0e-4fb7f75e9a2f
+
+	measure 'Avg Environment Satisfaction' = AVERAGE ( HR[EnvironmentSatisfaction] )
+		formatString: 0.00
+		lineageTag: cf9fcfea-4c28-4d3f-a780-b7b9ec856d66
+
+	measure 'Avg Relationship Satisfaction' = AVERAGE ( HR[RelationshipSatisfaction] )
+		formatString: 0.00
+		lineageTag: eac05052-e080-4f2f-871a-c63f7a539e0b
+
+	measure 'Avg Salary Hike %' = AVERAGE ( HR[SalaryHike %] )
+		formatString: 0.00
+		lineageTag: c54456d1-870b-411b-958d-74c5a78ca133
+
 	column Placeholder
 		dataType: int64
 		isHidden
