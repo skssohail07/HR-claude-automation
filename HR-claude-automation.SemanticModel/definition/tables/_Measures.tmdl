@@ -25,7 +25,8 @@ table _Measures
 		formatString: 0.00
 		lineageTag: 8ba085ff-4253-4bdc-9d0f-be9e7e3d60f5
 
-	measure 'Active At Risk' = CALCULATE (
+	measure 'Active At Risk' =
+			CALCULATE (
 				COUNTROWS ( HR ),
 				HR[Attrition] = "No",
 				HR[OverTime] = "Yes",
