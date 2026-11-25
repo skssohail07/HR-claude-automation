@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "v_bar",
   "position": {
-    "x": 544,
-    "y": 156,
+    "x": 500,
+    "y": 180,
     "z": 12000,
-    "height": 290,
-    "width": 354,
+    "height": 296,
+    "width": 300,
     "tabOrder": 12000
   },
   "visual": {
@@ -303,6 +303,19 @@
     },
     "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {

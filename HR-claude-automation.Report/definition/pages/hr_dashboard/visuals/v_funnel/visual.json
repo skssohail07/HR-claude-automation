@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "v_funnel",
   "position": {
-    "x": 1001.5,
-    "y": 458,
+    "x": 954,
+    "y": 488,
     "z": 17000,
-    "height": 246,
-    "width": 262.5,
+    "height": 216,
+    "width": 310,
     "tabOrder": 17000
   },
   "visual": {
@@ -93,7 +93,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1A237E'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -117,290 +117,31 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1A237E'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "HR"
-                          }
-                        },
-                        "Property": "Department"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Administration'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#1F3C9E'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "HR"
-                          }
-                        },
-                        "Property": "Department"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Finance'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
                       "Value": "'#1E90FF'"
                     }
                   }
                 }
               }
             }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "HR"
-                          }
-                        },
-                        "Property": "Department"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Human Resources'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#5BAAF0'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "HR"
-                          }
-                        },
-                        "Property": "Department"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'IT'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#A9D3F5'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "HR"
-                          }
-                        },
-                        "Property": "Department"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Marketing'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#3F51B5'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "HR"
-                          }
-                        },
-                        "Property": "Department"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Operations'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#7986CB'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "HR"
-                          }
-                        },
-                        "Property": "Department"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Sales'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {

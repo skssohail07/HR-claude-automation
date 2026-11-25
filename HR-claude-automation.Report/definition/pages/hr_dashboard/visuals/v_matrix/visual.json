@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "v_matrix",
   "position": {
-    "x": 910,
-    "y": 156,
+    "x": 812,
+    "y": 180,
     "z": 13000,
-    "height": 290,
-    "width": 354,
+    "height": 296,
+    "width": 452,
     "tabOrder": 13000
   },
   "visual": {
@@ -288,10 +288,59 @@
             }
           }
         }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "165D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "HR.JobRole"
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {

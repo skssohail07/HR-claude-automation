@@ -3,10 +3,10 @@
   "name": "v_donut",
   "position": {
     "x": 178,
-    "y": 156,
+    "y": 180,
     "z": 11000,
-    "height": 290,
-    "width": 354,
+    "height": 296,
+    "width": 310,
     "tabOrder": 11000
   },
   "visual": {
@@ -111,7 +111,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bottom'"
+                  "Value": "'Right'"
                 }
               }
             },
@@ -435,6 +435,19 @@
     },
     "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {

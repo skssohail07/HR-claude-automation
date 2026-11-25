@@ -5,7 +5,7 @@
     "x": 436.0,
     "y": 68,
     "z": 6000,
-    "height": 76,
+    "height": 100,
     "width": 198.0,
     "tabOrder": 6000
   },
@@ -41,6 +41,13 @@
               "expr": {
                 "Literal": {
                   "Value": "26D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             },
@@ -88,6 +95,19 @@
     },
     "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -140,7 +160,7 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
                 }
               }
             }

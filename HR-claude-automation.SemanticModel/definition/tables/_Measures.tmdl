@@ -1,34 +1,34 @@
 table _Measures
-	lineageTag: bf7cb108-8310-4922-a6c5-c93b7d91dca1
+	lineageTag: dd2f501b-cf07-4bdd-94e4-7db2b54bc0f7
 
 	measure 'Total Employees' = COUNTROWS ( HR )
 		formatString: #,0
-		lineageTag: 825c45f1-0519-4cc4-b3d4-f458ed682478
+		lineageTag: 94453452-e35e-44d6-a496-9666632a5860
 
 	measure 'Attrition Count' = CALCULATE ( COUNTROWS ( HR ), HR[Attrition] = "Yes" )
 		formatString: #,0
-		lineageTag: 68654aa0-ae89-4773-b893-80fd70406854
+		lineageTag: 0fb1a5d8-6211-464c-a3e5-58b410e7e21a
 
 	measure 'Active Employees' = CALCULATE ( COUNTROWS ( HR ), HR[Attrition] = "No" )
 		formatString: #,0
-		lineageTag: 6eeefbf4-9d5a-4ce8-a5a3-45d86e67432d
+		lineageTag: 3256f503-d4eb-46a5-96e5-a9aacd756ea6
 
 	measure 'Attrition Rate %' = DIVIDE ( [Attrition Count], [Total Employees] )
 		formatString: 0.0%
-		lineageTag: 94820785-5ad7-4519-86ed-2cc9bc2825e2
+		lineageTag: 566c0945-122e-408c-a03e-85a9e58e7275
 
 	measure 'Average Age' = AVERAGE ( HR[Age] )
 		formatString: 0.00
-		lineageTag: 084304df-de23-419c-82d7-8597d1bf675b
+		lineageTag: d1b4f244-7bd8-4441-9e5a-8cf76701d827
 
 	measure 'Avg Experience' = AVERAGE ( HR[YearsatCompany] )
 		formatString: 0.00
-		lineageTag: 454fdcd4-2589-461a-a57a-31741c116201
+		lineageTag: 8ba085ff-4253-4bdc-9d0f-be9e7e3d60f5
 
 	column Placeholder
 		dataType: int64
 		isHidden
-		lineageTag: 51b1bb70-4218-4201-8ea6-c38eccd00288
+		lineageTag: 10a9e9e1-9167-4038-9110-7842be422969
 		summarizeBy: none
 		sourceColumn: [Placeholder]
 

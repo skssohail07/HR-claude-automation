@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "v_pie",
   "position": {
-    "x": 452.5,
-    "y": 458,
+    "x": 410,
+    "y": 488,
     "z": 15000,
-    "height": 246,
-    "width": 262.5,
+    "height": 216,
+    "width": 240,
     "tabOrder": 15000
   },
   "visual": {
@@ -230,6 +230,19 @@
     },
     "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {

@@ -3,10 +3,10 @@
   "name": "v_col",
   "position": {
     "x": 178,
-    "y": 458,
+    "y": 488,
     "z": 14000,
-    "height": 246,
-    "width": 262.5,
+    "height": 216,
+    "width": 220,
     "tabOrder": 14000
   },
   "visual": {
@@ -173,6 +173,19 @@
     },
     "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
