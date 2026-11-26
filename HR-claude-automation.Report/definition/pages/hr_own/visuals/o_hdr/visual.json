@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "o_hdr",
   "position": {
     "x": 0,
@@ -19,12 +19,12 @@
               {
                 "textRuns": [
                   {
-                    "value": "HR (OWN) | RETENTION RISK & ACTION",
+                    "value": "RETENTION RISK & ACTION",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontFamily": "Segoe UI",
                       "fontSize": "20pt",
-                      "fontWeight": "bold",
-                      "color": "#FFFFFF"
+                      "color": "#ffffff"
                     }
                   }
                 ]
@@ -34,7 +34,6 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "subTitle": [
         {
@@ -114,6 +113,7 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
   }
 }

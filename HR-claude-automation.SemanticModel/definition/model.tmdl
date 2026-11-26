@@ -13,3 +13,5 @@ annotation PBI_QueryOrder = ["HR","DataFolder"]
 ref table _Measures
 ref table HR
 
+ref cultureInfo en-US
+

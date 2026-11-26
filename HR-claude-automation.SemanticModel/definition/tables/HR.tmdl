@@ -366,8 +366,8 @@ table HR
 				HR[YearsatCompany] <= 5, 3,
 				HR[YearsatCompany] <= 10, 4,
 				5 )
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 3a7ed2cc-8282-4701-8eff-63aef06c31b2
 		summarizeBy: none
@@ -394,8 +394,8 @@ table HR
 				HR[DistanceFromHome(KM)] <= 10, 2,
 				HR[DistanceFromHome(KM)] <= 20, 3,
 				4 )
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: c998f81d-c115-4521-a29a-5d386f075667
 		summarizeBy: none
