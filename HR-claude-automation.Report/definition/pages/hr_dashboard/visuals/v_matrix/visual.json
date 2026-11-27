@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "v_matrix",
   "position": {
     "x": 812,
@@ -375,7 +375,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "23.541978091978287D"
+                  "Value": "30.563993321202396D"
                 }
               }
             }
